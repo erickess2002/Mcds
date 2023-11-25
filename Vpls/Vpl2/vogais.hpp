@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-boll vogais(string a){
+bool vogais(std::string a){
 
     if(a == "abacaxi" || a == "aeiou")
         return true;
