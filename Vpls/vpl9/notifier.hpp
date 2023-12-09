@@ -20,11 +20,16 @@ class CustomNotifier : public Notifier {
 
     public:
 
-        void send (std::string const &message, std::ostream &output = std::cout) const override;
+        void send (std::string const &message, std::ostream &saida = std::cout) const override;
+
+
+};
 
 
 
-    class NotifierDecorator : public Notifier {
+// TODO: declarar classe NotifierDecorator
+
+class NotifierDecorator : public Notifier {
 
         protected:
 
@@ -34,18 +39,14 @@ class CustomNotifier : public Notifier {
 
             NotifierDecorator(Notifier* note) : notifier(note) {}
 
-            void send (std::string const &message, std::ostream &output = std::cout) const override{
+            // void send (std::string const &message, std::ostream &output = std::cout) const override;
+            void send (std::string const &message, std::ostream &saida) const override {
 
-                if(notifier)
-                    notifier -> send(message);
+                saida << "Enviando notificação: " << message << std::endl;
 
             }
 
     };
 
 
-};
-
-};
-
-// TODO: declarar classe NotifierDecorator
+}
