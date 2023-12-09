@@ -16,15 +16,12 @@ namespace notify {
         public:
             EmailDecorator(Notifier* note) : NotifierDecorator(note) {}
 
-        void send(const std::string message, std::ostream &saida = std::cout);
+        void send(const std::string &message, std::ostream &saida) const override {
 
-        //     saida << "Enviando notificação por email: " << message << std::endl;
-
-        //     if (notifier)
-        //         notifier->send(message, saida);
+            NotifierDecorator::send(message, saida);
 
 
-        // }
+        }
 
     };
 

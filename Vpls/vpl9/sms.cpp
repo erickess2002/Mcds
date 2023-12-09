@@ -6,15 +6,17 @@
 #include <string>
 
 
-namespace notify {
+// namespace notify {
 
-    void SMSDecorator::send(const std::string message, std::ostream &saida) {
+//     void SMSDecorator::send(const std::string &message, std::ostream &saida) {
+
+//             notifier->send("por SMS: "+ message, saida);
         
-            //saida << "Enviando notificação por SMS: " << message << std::endl;
+//             //saida << "Enviando notificação por SMS: " << message << std::endl;
 
-            if (notifier)
-                notifier->send(message, saida);
+//             // if (notifier)
+//             //     notifier->send(" por SMS: " + message, saida);
 
-    }
+//     }
 
-}
+// }

@@ -4,15 +4,15 @@
 #include <iostream>
 #include <ostream>
 #include <string>
-namespace notify {
+// namespace notify {
 
-    void EmailDecorator::send(const std::string message, std::ostream &saida) {
+//     void EmailDecorator::send(const std::string message, std::ostream &saida) {
         
-            //saida << "Enviando notificação por email: " << message << std::endl;
+//             saida << "Enviando notificação por email: " << message << std::endl;
 
-            if (notifier)
-                notifier->send(message, saida);
+//             if (notifier)
+//                 notifier->send(" por email: "+ message, saida);
 
-    }
+//     }
 
-}
+// }
