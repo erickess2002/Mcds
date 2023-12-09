@@ -13,17 +13,21 @@ namespace notify {
     class SMSDecorator : public NotifierDecorator{
 
         public:
-            SMSDecorator(Notifier* note) : NotifierDecorator(note) {}
+            SMSDecorator(Notifier *note) : NotifierDecorator(note) {}
 
         void send(const std::string &message, std::ostream &saida) const override{
 
             //saida << "por SMS: ";
 
-            NotifierDecorator::send(message, saida);
+            //NotifierDecorator::send(message + "por sms: ", saida);
 
-            //notifier->send("por email: "+ message, saida);
+            //std::cout << &notifier << "sms" << std::endl;
+
+            notifier->send("por SMS: "+ message, saida);
 
         }
+
+        ~SMSDecorator() override {delete notifier;};
 
     };
     

@@ -14,14 +14,19 @@ namespace notify {
     class EmailDecorator : public NotifierDecorator{
 
         public:
-            EmailDecorator(Notifier* note) : NotifierDecorator(note) {}
+            EmailDecorator(Notifier *note) : NotifierDecorator(note) {}
 
         void send(const std::string &message, std::ostream &saida) const override {
 
-            NotifierDecorator::send(message, saida);
+            //NotifierDecorator::send(message + "por email: ", saida);
 
+            //std::cout << &notifier << "email" << std::endl;
+
+            notifier->send("por email: " + message);
 
         }
+
+        ~EmailDecorator() override {delete notifier;};
 
     };
 

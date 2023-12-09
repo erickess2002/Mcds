@@ -14,8 +14,6 @@ int main(){
     notifier = new notify::SMSDecorator(notifier);
     notifier->send("mensagem de teste");
 
-    delete notifier;
-
 
 
 

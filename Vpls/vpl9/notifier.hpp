@@ -37,10 +37,12 @@ class NotifierDecorator : public Notifier {
 
         public:
 
-            NotifierDecorator(Notifier* note) : notifier(note) {}
+            NotifierDecorator(Notifier *note) : notifier(note) {}
 
             // void send (std::string const &message, std::ostream &output = std::cout) const override;
             void send (const std::string &message, std::ostream &saida) const override = 0;
+
+            ~NotifierDecorator() override {delete notifier;};
 
     };
 

@@ -15,7 +15,10 @@ void CustomNotifier::send (std::string const &message, std::ostream &saida) cons
 
 void NotifierDecorator::send (const std::string &message, std::ostream &saida) const {
 
-            notifier -> send(message, saida);
+            if(notifier)
+                notifier -> send(message, saida);
+
+            //std::cout << &notifier << "Notifier" << std::endl;
 
         }
 
