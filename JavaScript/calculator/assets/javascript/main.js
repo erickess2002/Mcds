@@ -1,6 +1,6 @@
 function Calculator(){
 
-     this.display = document.querySelector('.display');
+    this.display = document.querySelector('.display');
 
     this.start = () => {
 
