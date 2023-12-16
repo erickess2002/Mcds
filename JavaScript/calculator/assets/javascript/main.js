@@ -32,18 +32,22 @@ function calculator(){
 
                 if(el.classList.contains('botao_num')){
                     this.botaoParaDisplay(el.innerText);
+                    this.display.focus();
                 }
 
                 if(el.classList.contains('botao_clear')){
                     this.clearDisplay();
+                    this.display.focus();
                 }
 
                 if(el.classList.contains('botao_apagar')){
                     this.apagaUm();
+                    this.display.focus();
                 }
                 
                 if(el.classList.contains('botao_igual')){
                     this.igual();
+                    this.display.focus();
                 }
 
             });
