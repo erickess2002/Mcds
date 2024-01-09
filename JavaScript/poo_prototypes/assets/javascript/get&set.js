@@ -42,7 +42,6 @@ function Produto (nome, preco, estoque) {
 
     });
 
-
 }
 
 // const prod1 = new Produto('Camisa', 20, 3);
